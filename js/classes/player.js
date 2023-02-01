@@ -24,12 +24,13 @@ class Player {
   }
 
   update() {
+    this.positon.x += this.velocity.x;
     this.positon.y += this.velocity.y;
+    this.sides.bottom = this.positon.y + this.height;
 
     // above bottom of canvas
     if (this.sides.bottom + this.velocity.y < canvas.height) {
       this.velocity.y += this.gravity;
-      this.sides.bottom = this.positon.y + this.height;
     } else this.velocity.y = 0;
   }
 }
