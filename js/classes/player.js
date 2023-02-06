@@ -1,5 +1,6 @@
-class Player {
-  constructor({ collisionBlocks = [] }) {
+class Player extends Sprite {
+  constructor({ collisionBlocks = [], imageSrc, frameRate }) {
+    super({ imageSrc, frameRate });
     this.position = {
       x: 200,
       y: 200,
@@ -10,8 +11,6 @@ class Player {
       y: 0,
     };
 
-    this.width = 30;
-    this.height = 30;
     this.sides = {
       bottom: this.position.y + this.height,
     };
@@ -19,12 +18,11 @@ class Player {
     this.collisionBlocks = collisionBlocks;
   }
 
-  draw() {
-    c.fillStyle = "red";
-    c.fillRect(this.position.x, this.position.y, this.width, this.height);
-  }
-
   update() {
+    // red box
+    // c.fillStyle = "rbga(0, 0, 255, 0.5)";
+    // c.fillRect(this.position.x, this.position.y, this.width, this.height);
+
     this.position.x += this.velocity.x;
 
     //check for horizontal collision
