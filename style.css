@@ -5,5 +5,26 @@
 }
 
 .bodyStyle {
-  background-color: black;
+  background-color: #363636;
+}
+
+canvas {
+  border: 6px solid black;
+}
+
+body {
+  background-color: #363636;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  margin-bottom: 1rem;
+  gap: 6px;
+
 }
